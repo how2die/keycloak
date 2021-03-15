@@ -46,6 +46,24 @@ spec:
               key: password
         - name: PROXY_ADDRESS_FORWARDING
           value: "true"
+        - name: DB_VENDOR
+          value: "POSTGRES"
+        - name: DB_ADDR
+          value: "postgres"
+        - name: DB_DATABASE
+          value: "keycloak"
+        - name: DB_SCHEMA
+          value: "public"
+        - name: DB_USERNAME
+          valueFrom:
+            secretKeyRef:
+              name: db-secret
+              key: username
+        - name: DB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: db-secret
+              key: password
         ports:
         - name: http
           containerPort: 8080
