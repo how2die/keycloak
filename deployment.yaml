@@ -54,7 +54,7 @@ spec:
           value: "keycloak"
         - name: DB_SCHEMA
           value: "public"
-        - name: DB_USERNAME
+        - name: DB_USER
           valueFrom:
             secretKeyRef:
               name: db-secret
