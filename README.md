@@ -1,5 +1,7 @@
 # keycloak
 
+## Kubernetes deployment
+
 Store admin credentials as a Secret:
 
 ```
@@ -11,3 +13,23 @@ Create Service and Deployment:
 ```
 kubectl apply -f deployment.yaml
 ```
+
+## Configuration
+
+Login as admin and create the `how2die` realm.
+
+### Realm settings
+
+Enable `User registration` under `Login`.
+
+Select `How2die` as `Login Theme`.
+
+### Client settings
+
+Create a client named `website` using openid-connect and Root url `https://how2die.com`
+
+### Authentication
+
+Under `Registration`, disable `Profile Validation` to not require first name, last name and email.
+
+Enable "Remember Me" under Login; increase token lifespan under Tokens.
