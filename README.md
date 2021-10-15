@@ -2,6 +2,11 @@
 
 ## Kubernetes deployment
 
+### Prerequisites
+
+- Kubernetes cluster with kubectl access
+- A database named "keycloak"
+
 Store admin credentials as a Secret:
 
 ```
