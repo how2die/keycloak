@@ -7,6 +7,8 @@
 - Kubernetes cluster with kubectl access
 - A database named "keycloak"
 
+### Deployment
+
 Store admin credentials as a Secret:
 
 ```
